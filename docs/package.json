@@ -1,0 +1,12 @@
+{
+  "name": "@react-router-fluent/docs",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Alexander Nicholson",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "scripts": {
+
+  }
+}

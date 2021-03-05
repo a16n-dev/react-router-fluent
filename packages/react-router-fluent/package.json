@@ -1,0 +1,30 @@
+{
+  "name": "react-router-fluent",
+  "version": "0.0.1",
+  "description": "A Select control built with and for ReactJS",
+  "main": "dist/react-router-fluent.cjs.js",
+  "module": "dist/react-router-fluent.esm.js",
+  "author": "Alexander Nicholson",
+  "license": "MIT",
+  "repository": "https://github.com/alexn400/react-router-fluent/tree/master/packages/react-router-fluent",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "react",
+    "router",
+    "fluent",
+    "typescript"
+  ]
+}
