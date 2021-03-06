@@ -71,10 +71,11 @@ const crumbs = resolveCrumbs(root().users().details())
 
 /**
  * crumbs = [
- *   {link: '/',              name: 'Dashboard'},
- *   {link: '/users',         name: 'Users'},
- *   {link: '/users/details', name: 'Details'},
+ *   {link: '/',              text: 'Dashboard'},
+ *   {link: '/users',         text: 'Users'},
+ *   {link: '/users/details', text: 'Details'},
  * ]
+ */
 ```
 
 ## License
