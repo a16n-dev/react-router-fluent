@@ -1,7 +1,7 @@
-
+![npm](https://img.shields.io/npm/v/react-router-fluent)
 # React-Router-Fluent
 
-Commodo et enim magna sit quis exercitation nisi aliqua dolor non consequat consequat cupidatat minim. Deserunt est qui sint veniam duis dolor culpa cupidatat ex. Tempor do consectetur officia Lorem. Proident velit proident nulla irure esse elit labore. Aliquip deserunt id cillum amet. Eiusmod velit eiusmod culpa occaecat quis reprehenderit voluptate aliqua cupidatat sint.s
+An experimental fluent-style routing tool built on top of `react-router`
 
 ## License
 
