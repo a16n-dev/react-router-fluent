@@ -1,7 +1,7 @@
-import { Route as RouteType } from "./types";
+import { DeepRoute } from "./types";
 import {Route} from 'react-router-dom';
 
-const recurseRouterArray = (r: RouteType, cb: (path: string, component: any) => void, path: string, queryParamCount = 0) => {
+const recurseRouterArray = (r: DeepRoute, cb: (path: string, component: any) => void, path: string, queryParamCount = 0) => {
     let newPath: string;
     let newQueryParamCount = queryParamCount;
     if(typeof r.path === 'string'){
@@ -14,7 +14,7 @@ const recurseRouterArray = (r: RouteType, cb: (path: string, component: any) => 
     r.children.forEach(r => recurseRouterArray(r, cb, newPath, newQueryParamCount));
 }
 
-const buildRouterArray = <T extends RouteType>(routemap: T) => {
+const buildRouterArray = <T extends DeepRoute>(routemap: T) => {
 
     const routeArray: Array<React.ReactElement> = [];
     const callback = (path: string, component: any) => routeArray.push(<Route component={component} path={path} exact/>);

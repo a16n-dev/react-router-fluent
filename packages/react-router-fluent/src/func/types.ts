@@ -1,7 +1,7 @@
 export interface BasicRoute {
     readonly Component: any;
     readonly name: string;
-    readonly children: readonly Route[]
+    readonly children: readonly DeepRoute[]
 }
 
 export interface SimpleRoute extends BasicRoute {
@@ -14,4 +14,4 @@ export interface QueryRoute extends BasicRoute {
     readonly path: ((param: string) => string);
 }
 
-export type Route = SimpleRoute | QueryRoute
+export type DeepRoute = SimpleRoute | QueryRoute

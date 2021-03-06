@@ -1,17 +1,17 @@
-import { Route } from "./types";
+import { DeepRoute } from "./types";
 
 export type Crumb = {
     text: string;
     link: string;
 }
 
-type Mapping<T extends Route> = T['path'] extends string ? () => {
+export type Mapping<T extends DeepRoute> = T['path'] extends string ? () => {
     [a in T['children'][number] as a['name']]: Mapping<a>
 } : (param: string) => {
     [a in T['children'][number] as a['name']]: Mapping<a>
 };
 
-const recurseRouteObject = (a: Route) => (fullpath: string, crumbs: Array<Crumb>) => {
+const recurseRouteObject = (a: DeepRoute) => (fullpath: string, crumbs: Array<Crumb>) => {
     if(typeof a.path === 'string'){
         return () => {
             const routePath = `${fullpath}${a.path}`;
@@ -43,7 +43,7 @@ const recurseRouteObject = (a: Route) => (fullpath: string, crumbs: Array<Crumb>
     }
 }
 
-const buildRouteObject = <T extends Route>(routemap: T): Mapping<T> => {
+const buildRouteObject = <T extends DeepRoute>(routemap: T): Mapping<T> => {
 
     const converted = recurseRouteObject(routemap)('', []) as Mapping<T>
     return converted;
