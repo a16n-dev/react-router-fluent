@@ -1,6 +1,7 @@
-import { Route } from "./types";
+import { Route as RouteType } from "./types";
+import {Route} from 'react-router-dom';
 
-const recurseRouterArray = (r: Route, cb: (path: string, component: any) => void, path: string, queryParamCount = 0) => {
+const recurseRouterArray = (r: RouteType, cb: (path: string, component: any) => void, path: string, queryParamCount = 0) => {
     let newPath: string;
     let newQueryParamCount = queryParamCount;
     if(typeof r.path === 'string'){
@@ -13,13 +14,10 @@ const recurseRouterArray = (r: Route, cb: (path: string, component: any) => void
     r.children.forEach(r => recurseRouterArray(r, cb, newPath, newQueryParamCount));
 }
 
-const buildRouterArray = <T extends Route>(routemap: T) => {
+const buildRouterArray = <T extends RouteType>(routemap: T) => {
 
-    const routeArray = [];
-    const callback = (path: string, component: any) => routeArray.push({
-        path,
-        component
-    });
+    const routeArray: Array<React.ReactElement> = [];
+    const callback = (path: string, component: any) => routeArray.push(<Route component={component} path={path} exact/>);
 
     recurseRouterArray(routemap, callback, '');
 

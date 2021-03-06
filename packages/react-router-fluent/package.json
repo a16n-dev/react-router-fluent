@@ -1,22 +1,23 @@
 {
   "name": "react-router-fluent",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Smart routing with support for typescript",
   "main": "dist/react-router-fluent.cjs.js",
   "module": "dist/react-router-fluent.esm.js",
   "author": "Alexander Nicholson",
   "license": "MIT",
   "repository": "https://github.com/alexn400/react-router-fluent/tree/master/packages/react-router-fluent",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.7",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.2.0"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
+    "react-dom": "^16.8.0 || ^17.0.0",
+    "react-router-dom": "^5.2.0"
   },
   "files": [
     "dist",
