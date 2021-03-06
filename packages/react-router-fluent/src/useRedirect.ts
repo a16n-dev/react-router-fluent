@@ -1,17 +1,11 @@
-import { useHistory } from "react-router"
-import { Mapping } from "./func/buildRouteObject";
+import { useHistory } from "react-router";
 import { resolvePath } from "./func/helpers";
-import { DeepRoute } from "./func/types";
 
 const useRedirect = () => {
     const history = useHistory();
 
-    const redirect = (route: Mapping<DeepRoute>) => {
+    return (route: any) => {
         history.push(resolvePath(route))
-    }
-
-    return {
-        redirect
     }
 }
 
