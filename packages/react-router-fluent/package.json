@@ -1,6 +1,6 @@
 {
   "name": "react-router-fluent",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Smart routing with support for typescript",
   "main": "dist/react-router-fluent.cjs.js",
   "module": "dist/react-router-fluent.esm.js",
