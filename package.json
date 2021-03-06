@@ -10,6 +10,7 @@
     "url": "https://github.com/alexn400/react-router-fluent.git"
   },
   "dependencies": {
+    "@changesets/cli": "^2.14.1",
     "@babel/core": "^7.12.0",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.0",
@@ -43,7 +44,10 @@
     "fresh": "rm -rf node_modules && yarn",
     "test": "npm run test:jest && npm run test:cypress",
     "test:jest": "jest --coverage",
-    "postinstall": "preconstruct dev"
+    "postinstall": "preconstruct dev",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "yarn build && changeset publish"
   },
   "files": [
     "dist",

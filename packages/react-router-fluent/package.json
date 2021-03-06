@@ -1,13 +1,14 @@
 {
   "name": "react-router-fluent",
-  "version": "0.0.1",
-  "description": "A Select control built with and for ReactJS",
+  "version": "0.0.2",
+  "description": "Smart routing with support for typescript",
   "main": "dist/react-router-fluent.cjs.js",
   "module": "dist/react-router-fluent.esm.js",
   "author": "Alexander Nicholson",
   "license": "MIT",
   "repository": "https://github.com/alexn400/react-router-fluent/tree/master/packages/react-router-fluent",
   "dependencies": {
+
   },
   "devDependencies": {
     "react": "^16.13.0",
@@ -26,5 +27,10 @@
     "router",
     "fluent",
     "typescript"
-  ]
+  ],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts"
+    ]
+  }
 }
